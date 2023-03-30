@@ -1,12 +1,9 @@
-module "homolog" {
+module "prod" {
     source = "../../infra"
-
-    nome_repositorio = "homolog"
-    cargoIAM = "homolog"
-    ambiante = "homolog"
-    imagem="leonardosartorello/go_ci:22"
+    
+    cluster_name = "homolog2"
 }
 
-output "IP_alb" {
-  value = module.homolog.IP
+output "IP_db" {
+  value = module.prod.IP
 }
